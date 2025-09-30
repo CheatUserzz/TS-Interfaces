@@ -1,6 +1,6 @@
 local Library = {}
 
-local NeverloseVersion = "v1.1A."
+local NeverloseVersion = "v1.2A."
 
 local TweenService = game:GetService("TweenService")
 local input = game:GetService("UserInputService")
@@ -141,7 +141,7 @@ function Library:Window(options)
     SideBar.BackgroundColor3 = Color3.fromRGB(26, 36, 48)
     SideBar.BorderSizePixel = 0
     SideBar.Size = UDim2.new(0, 187, 0, 516)
-    SideBar.BackgroundTransparency = 0.3 -- 30% transparente
+    SideBar.BackgroundTransparency = 0.7 -- 30% transparente
 
     sidebarCorner.CornerRadius = UDim.new(0, 4)
     sidebarCorner.Name = "sidebarCorner"
@@ -173,15 +173,19 @@ function Library:Window(options)
     Title.Name = "Title"
     Title.Parent = SideBar
     Title.BackgroundColor3 = Color3.fromRGB(234, 239, 245)
-    Title.BackgroundTransparency = 1.000
+    Title.BackgroundTransparency = 1
     Title.BorderSizePixel = 0
-    Title.Position = UDim2.new(0.0614973232, 0, 0.0213178284, 0)
+    Title.Position = UDim2.new(0.0615, 0, 0.0213, 0)
     Title.Size = UDim2.new(0, 162, 0, 26)
     Title.Font = Enum.Font.ArialBold
     Title.Text = options.text
-    Title.TextColor3 = Color3.fromRGB(234, 239, 245)
-    Title.TextSize = 28.000
+    Title.TextColor3 = Color3.fromRGB(234, 239, 245) -- cor do texto
+    Title.TextSize = 20 -- menor que antes
     Title.TextWrapped = true
+
+    -- Contorno do texto
+    Title.TextStrokeTransparency = 0 -- 0 = totalmente visível
+    Title.TextStrokeColor3 = Color3.fromRGB(0, 0, 139) -- azul escuro
 
     --[[saveBtn.Name = "saveBtn"
     saveBtn.Parent = TopBar
